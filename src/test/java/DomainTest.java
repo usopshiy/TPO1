@@ -1,3 +1,4 @@
+import domain.Main;
 import domain.characters.Leader;
 import domain.enums.Race;
 import domain.enums.Result;
@@ -68,5 +69,10 @@ public class DomainTest {
         l2.say("smth with проблемы pupupu");
         assertEquals(Status.IN_RUINS, galaxy.getStatus());
         assertEquals(Result.WAR, meet.getResult());
+    }
+
+    @Test
+    void testRunnable() {
+        assertDoesNotThrow(() -> {Main.main(null);});
     }
 }
